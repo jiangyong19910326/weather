@@ -1,6 +1,7 @@
 {
     "name": "jiangyong\/weather",
     "description": "a weather SDK",
+    "license": "cb46253115c58f38d41c109184e5223706e0fa2d",
     "authors": [
         {
             "name": "jiangyong",
