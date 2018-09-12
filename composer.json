@@ -1,0 +1,28 @@
+{
+    "name": "jiangyong\/weather",
+    "description": "a weather SDK",
+    "license": "123456",
+    "authors": [
+        {
+            "name": "jiangyong",
+            "email": "826834737@qq.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "phpunit/phpunit": "^7.3",
+        "mockery/mockery": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jiangyong\\Weather\\": "./src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jiangyong\\Weather\\ServiceProvider"
+            ]
+        }
+    }
+}
