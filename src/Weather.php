@@ -1,12 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 82683
- * Date: 2018/9/11 0011
- * Time: 下午 2:40
+
+/*
+ * This file part of the jiangyong/weather
+ *
+ * (c) jiangyong<i@jiangyong.me>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Jiangyong\Weather;
+
 use GuzzleHttp\Client;
 use Jiangyong\Weather\Exceptions\InvalidArgumentException;
 use Jiangyong\Weather\Exceptions\HttpException;
@@ -18,12 +22,14 @@ class Weather
      * @var array|array
      */
     protected $key;
+
     protected $guzzleOptions = [];
 
     /**
      * Weather constructor.
+     *
      * @param string $key
-     * 初始化获取api key
+     *                    初始化获取api key
      */
     public function __construct($key)
     {
@@ -32,7 +38,7 @@ class Weather
 
     /**
      * @return Client
-     * 获取连接客户端
+     *                获取连接客户端
      */
     public function getHttpClient()
     {
@@ -41,7 +47,7 @@ class Weather
 
     /**
      * @param array $options
-     * 设置链接guzzle的可选参数
+     *                       设置链接guzzle的可选参数
      */
     public function setGuzzleOptions(array $options)
     {
@@ -52,12 +58,14 @@ class Weather
      * @param $city
      * @param string $type
      * @param string $format
+     *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
-     * 获取天气状况，包括实时天气和预报天气
+     *                                  获取天气状况，包括实时天气和预报天气
      */
-    public function getWeather($city,  $type = 'base',  $format = 'json')
+    public function getWeather($city, $type = 'base', $format = 'json')
     {
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
 
@@ -73,7 +81,7 @@ class Weather
             'key' => $this->key,
             'city' => $city,
             'output' => $format,
-            'extensions' =>  $type,
+            'extensions' => $type,
         ]);
 
         try {
@@ -90,26 +98,30 @@ class Weather
     /**
      * @param $city
      * @param string $format
+     *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
-     * 获取实时天气
+     *                                  获取实时天气
      */
     public function getLiveWeather($city, $format = 'json')
     {
-        return $this->getWeather($city,'base',$format);
+        return $this->getWeather($city, 'base', $format);
     }
 
     /**
      * @param $city
      * @param string $format
+     *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
-     * 获取预报天气
+     *                                  获取预报天气
      */
     public function getForecastsWeather($city, $format = 'json')
     {
-        return $this->getWeather($city,'all',$format);
+        return $this->getWeather($city, 'all', $format);
     }
 }
