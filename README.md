@@ -1,6 +1,6 @@
 # Weather
     基于 高德开放平台 的 PHP 天气信息组件。
-
+[![Build Status](https://travis-ci.org/jiangyong19910326/weather.svg?branch=master)](https://travis-ci.org/jiangyong19910326/weather)
 ### 安装
     $ composer require overtrue/weather -vvv
 ### 配置
