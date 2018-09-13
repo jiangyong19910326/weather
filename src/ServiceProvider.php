@@ -1,34 +1,34 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 82683
- * Date: 2018/9/12 0012
- * Time: 上午 10:23
+
+/*
+ * This file part of the jiangyong/weather
+ *
+ * (c) jiangyong<i@jiangyong.me>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Jiangyong\Weather;
 
 /**
- * Class ServiceProvider
- * @package Jiangyong\Weather
- *  扩展包注册
+ * Class ServiceProvider.
  */
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
      * @var bool
-     * 标记服务提供器延迟加载 true 来声明延迟加载
+     *           标记服务提供器延迟加载 true 来声明延迟加载
      */
     protected $defer = true;
 
-
     /**
      *  return void
-     *  注册服务提供者
+     *  注册服务提供者.
      */
     public function register()
     {
-        $this->app->singleton(Weather::class, function(){
+        $this->app->singleton(Weather::class, function () {
             return new Weather(config('services.weather.key'));
         });
 
@@ -37,7 +37,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
     /**
      * @return array
-     * 取得提供者的服务
+     *               取得提供者的服务
      */
     public function provides()
     {
