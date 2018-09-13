@@ -94,6 +94,9 @@ class WeatherTest extends TestCase
         $this->assertSame('<hello>content</hello>',$w->getWeather('深圳','all','xml'));
     }
 
+    /**
+     *
+     */
     public function testGetWeatherWithGuzzleRuntimeException()
     {
         $client = \Mockery::mock(Client::class);
@@ -107,12 +110,18 @@ class WeatherTest extends TestCase
         $w->getWeather('深圳');
     }
 
+    /**
+     * 单元测试链接是否奏效
+     */
     public function testGetHttpClient()
     {
         $w = new Weather('mock-key');
         $this->assertInstanceOf(ClientInterface::class,$w->getHttpClient());
     }
 
+    /**
+     * 单元测试设置链接的参数
+     */
     public function testSetGuzzleOptions()
     {
         $w = new Weather('mock-key');
@@ -121,6 +130,30 @@ class WeatherTest extends TestCase
         $w->setGuzzleOptions(['timeout'=>5000]);
         $this->assertSame(5000,$w->getHttpClient()->getConfig('timeout'));
 
+    }
+
+    /**
+     *  单元测试实时天气函数
+     */
+    public function testGetLiveWeather()
+    {
+        $w = \Mockery::mock(Weather::class)->makePartial();
+
+        $w->expects()->getWeather('深圳','base','json')->andReturn(['success' => true]);
+
+        $this->assertSame(['success' => true],$w->getLiveWeather('深圳'));
+    }
+
+    /**
+     * 单元测试预报天气函数
+     */
+    public function testGetForecastsWeather()
+    {
+        $w = \Mockery::mock(Weather::class)->makePartial();
+
+        $w->expects()->getWeather('深圳','all','json')->andReturn(['success' => true] );
+
+        $this->assertSame(['success' => true],$w->getForecastsWeather('深圳'));
     }
 
 }
