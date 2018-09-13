@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="705c9b17-3057-4d6a-8b1c-957bd27a058c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Weather.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Weather.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/WeatherTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/WeatherTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,7 +25,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Weather.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Weather.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Weather.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
@@ -52,12 +50,17 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="4350">
-                <caret line="174" column="3" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
+              <first_editor relative-caret-position="1825">
+                <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="WeatherTest.php" pinned="false" current-in-tab="false">
@@ -182,7 +185,7 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-114" />
     <option name="width" value="1940" />
     <option name="height" value="1050" />
@@ -259,12 +262,12 @@
       <updated>1536647318976</updated>
       <workItem from="1536647320195" duration="11337000" />
       <workItem from="1536714862361" duration="14695000" />
-      <workItem from="1536800950461" duration="614000" />
+      <workItem from="1536800950461" duration="1173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26646000" />
+    <option name="totallyTimeSpent" value="27205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -461,16 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="4350">
-            <caret line="174" column="3" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Weather.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -480,6 +473,19 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1825">
+            <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
