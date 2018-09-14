@@ -4,11 +4,11 @@
 ![styleCI build status](https://github.styleci.io/repos/148435620/shield)
 
 ### 安装
-    $ composer require overtrue/weather -vvv
+    $ composer require jiangyong/weather -vvv
 ### 配置
     在使用本扩展之前，你需要去 高德开放平台 注册账号，然后创建应用，获取应用的 API Key。
 ### 使用
-    use Overtrue\Weather\Weather;
+    use Jiangyong\Weather\Weather;
     $key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
     $weather = new Weather($key);
     获取实时天气
@@ -143,7 +143,7 @@
     然后在 .env 中配置 WEATHER_API_KEY ：
 
     WEATHER_API_KEY=xxxxxxxxxxxxxxxxxxxxx
-    可以用两种方式来获取 Overtrue\Weather\Weather 实例：
+    可以用两种方式来获取 Jiangyong\Weather\Weather 实例：
 
     方法参数注入
         .
